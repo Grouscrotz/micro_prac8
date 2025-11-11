@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    name: Run tests (always success)
+    name: Run tests (unit)
     runs-on: ubuntu-latest
 
     steps:
@@ -38,7 +38,7 @@ jobs:
           echo "✅ All integration tests passed successfully!"
 
   build-and-push-to-yc:
-    name: Build and push to Yandex Cloud (simulated)
+    name: integration tests
     runs-on: ubuntu-latest
     needs: test
     if: success()
